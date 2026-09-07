@@ -1,0 +1,3 @@
+interface:
+  display_name: "Astra Quota Router"
+  short_description: "Preserve frontier quota with risk-based model routing and evidence-driven acceptance."

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "mechanical_formatting",
+    "prompt": "Rename these five local variables and run the formatter.",
+    "expected": {
+      "astra_required": false,
+      "tier": "0-1",
+      "reason": "Mechanical bounded work with deterministic verification."
+    }
+  },
+  {
+    "name": "bounded_feature",
+    "prompt": "Implement a new parser method in one module with existing interface and add tests.",
+    "expected": {
+      "astra_required": false,
+      "tier": "1",
+      "reason": "Narrow implementation with fixed boundaries and test evidence."
+    }
+  },
+  {
+    "name": "medium_cross_file_refactor",
+    "prompt": "Refactor the cache adapter across four modules without changing the public API.",
+    "expected": {
+      "astra_required": false,
+      "tier": "2",
+      "reason": "Broader synthesis may be needed, but architecture and contract are frozen."
+    }
+  },
+  {
+    "name": "distributed_ordering_design",
+    "prompt": "We have duplicate and out-of-order events across services. Decide the consistency and idempotency architecture.",
+    "expected": {
+      "astra_required": true,
+      "tier": "3",
+      "reason": "Cross-cutting distributed-state and ordering decision with high rework risk."
+    }
+  },
+  {
+    "name": "security_boundary",
+    "prompt": "Design how an agent may execute production database tools while preventing prompt-injection driven writes.",
+    "expected": {
+      "astra_required": true,
+      "tier": "3",
+      "reason": "Trust-boundary and consequential security design."
+    }
+  },
+  {
+    "name": "worker_conflict_escalation",
+    "prompt": "Two cheaper agents inspected the race condition and returned incompatible root causes with passing but different tests.",
+    "expected": {
+      "astra_required": true,
+      "tier": "3",
+      "reason": "Conflicting evidence after cheaper investigation justifies escalation."
+    }
+  },
+  {
+    "name": "final_acceptance",
+    "prompt": "Implementation is complete. Review the material diff, test output, benchmark, and unresolved assumptions before merge.",
+    "expected": {
+      "astra_required": true,
+      "tier": "3",
+      "reason": "Final acceptance of consequential work is a frontier judgement task."
+    }
+  },
+  {
+    "name": "critical_quota_reserve",
+    "prompt": "I only have a small amount of Astra quota left. Plan and execute a medium-sized feature without using Astra for routine work.",
+    "expected": {
+      "astra_required": "checkpoint-only",
+      "mode": "frontier-gated",
+      "reason": "Use cheaper orchestration/execution and reserve Astra for architecture or unresolved high-risk checkpoints."
+    }
+  }
+]
